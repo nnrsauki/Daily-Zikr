@@ -7,7 +7,8 @@ export default function App() {
   const [count, setCount] = useState(0);
   const [isCompleted, setIsCompleted] = useState(false);
   const [animating, setAnimating] = useState(false);
-  const [showTransliteration, setShowTransliteration] = useState(false);
+  // Changed default to true so transliteration appears immediately
+  const [showTransliteration, setShowTransliteration] = useState(true);
 
   const currentZikr = ZIKR_SEQUENCE[currentStep];
   const totalSteps = ZIKR_SEQUENCE.length;
@@ -69,7 +70,8 @@ export default function App() {
   const strokeDashoffset = circumference - progress * circumference;
 
   return (
-    <div className="h-screen w-full bg-gray-50 text-gray-900 font-sans flex flex-col relative overflow-hidden selection:bg-teal-100">
+    /* h-[100dvh] ensures it fits mobile screens perfectly without scrollbars */
+    <div className="h-[100dvh] w-full bg-gray-50 text-gray-900 font-sans flex flex-col relative overflow-hidden selection:bg-teal-100">
       <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-white to-transparent pointer-events-none z-0" />
       <div className="flex-1 flex flex-col max-w-md mx-auto w-full relative z-10 h-full">
         
@@ -95,7 +97,8 @@ export default function App() {
         <div className="flex-1 flex flex-col items-center justify-center min-h-0">
           {!isCompleted ? (
             <div className="w-full flex flex-col items-center h-full">
-              <div className="flex-1 flex items-center justify-center w-full max-h-[45vh]">
+              {/* Ring Area - Adjusted max height to keep room for buttons */}
+              <div className="flex-1 flex items-center justify-center w-full max-h-[40vh]">
                 <div className="relative cursor-pointer group select-none touch-manipulation transform active:scale-95 transition-transform" onClick={handleTap} style={{ WebkitTapHighlightColor: 'transparent' }}>
                   <svg className="transform -rotate-90 w-64 h-64 md:w-72 md:h-72 drop-shadow-xl">
                     <circle cx="50%" cy="50%" r={radius} stroke="#E5E7EB" strokeWidth="10" fill="white" />
@@ -109,6 +112,7 @@ export default function App() {
                 </div>
               </div>
 
+              {/* Text Area */}
               <div className={`w-full px-6 pb-2 flex flex-col items-center justify-start flex-1 min-h-0 transition-opacity duration-300 ${animating ? 'opacity-0' : 'opacity-100'}`}>
                 {currentZikr.note && <span className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-blue-500 bg-blue-50 px-2 py-1 rounded-full mb-2 shrink-0"><BookOpen size={10} /> {currentZikr.note}</span>}
                 <h2 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-2 shrink-0">{currentZikr.label}</h2>
@@ -132,9 +136,9 @@ export default function App() {
           )}
         </div>
 
-        {/* FOOTER CONTROLS */}
+        {/* FOOTER CONTROLS - Added extra bottom padding (pb-10) to lift buttons up */}
         {!isCompleted && (
-          <div className="px-6 py-4 shrink-0 grid grid-cols-2 gap-4 border-t border-gray-100 bg-white/50 backdrop-blur-sm">
+          <div className="px-6 pt-4 pb-10 shrink-0 grid grid-cols-2 gap-4 border-t border-gray-100 bg-white/50 backdrop-blur-sm">
             <button onClick={handlePrev} disabled={currentStep === 0} className="flex items-center justify-center gap-2 py-3 rounded-xl bg-gray-100 text-gray-600 font-medium disabled:opacity-30 active:bg-gray-200 transition-colors"><ChevronLeft size={18} /> Prev</button>
             <button onClick={handleNext} disabled={currentStep === totalSteps - 1} className="flex items-center justify-center gap-2 py-3 rounded-xl bg-gray-900 text-white font-medium disabled:opacity-30 active:bg-gray-800 transition-colors">Next <ChevronRight size={18} /></button>
           </div>
@@ -145,4 +149,4 @@ export default function App() {
 }
 
 
-                        
+          
