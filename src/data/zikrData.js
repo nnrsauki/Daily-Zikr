@@ -1,5 +1,5 @@
 export const ZIKR_SEQUENCE = [
-  // --- INTRO ---
+  // --- INTRODUCTORY SECTION ---
   {
     id: "intro-1",
     label: "Istighfar",
@@ -50,19 +50,20 @@ export const ZIKR_SEQUENCE = [
   },
   {
     id: "intro-7",
-    label: "Protection",
+    label: "Protection (Read)",
     arabic: "آية الكرسي + المعوذات",
-    transliteration: "Ayatul Kursi + Al-Mu'awwidhat",
+    transliteration: "Ayatul Kursi + Al-Mu'awwidhat (Ikhlas, Falaq, Nas)",
     target: 1,
-    note: "Recite then tap",
+    note: "Recite then tap to proceed",
     color: "blue"
   },
-  // --- MAIN ---
+
+  // --- MAIN SEQUENCE ---
   {
     id: "main-0",
     label: "Al-Malik Al-Haqq",
     arabic: "لا إله إلا الله الملك الحق المبين، لا إله إلا الله العدل اليقين، لا إله إلا الله ربنا ورب آبائنا الأولين، سبحانك إني كنت من الظالمين، لا إله إلا الله وحده لا شريك له، له الملك وله الحمد يحيي ويميت وهو حي لا يموت بيده الخير وإليه المصير وهو علي كل شيء قدير",
-    transliteration: "La ilaha illallahul Malikul Haqqul Mubin... (Full dua)",
+    transliteration: "La ilaha illallahul Malikul Haqqul Mubin, La ilaha illallahul 'Adlul Yaqin, La ilaha illallahu Rabbuna wa Rabbu aba'inal awwalin, Subhanaka inni kuntu minaz-zalimin. La ilaha illallahu wahdahu la sharika lah, lahul mulku wa lahul hamdu yuhyi wa yumitu wa huwa hayyun la yamut, biyadihil khayr wa ilayhil masir, wa huwa 'ala kulli shayin qadir.",
     target: 3,
     color: "teal"
   },
@@ -94,7 +95,7 @@ export const ZIKR_SEQUENCE = [
     id: "main-4",
     label: "Sayyidul Istighfar",
     arabic: "اللهم أنت ربي لا إله إلا أنت، خلقتني وأنا عبدك، وأنا على عهدك ووعدك ما استطعت، أعوذ بك من شر ما صنعت، أبوء لك بنعمتك علي، وأبوء بذنبي فاغفر لي فإنه لا يغفر الذنوب إلا أنت",
-    transliteration: "Allahumma anta Rabbi la ilaha illa ant...",
+    transliteration: "Allahumma anta Rabbi la ilaha illa ant, khalaqtani wa ana 'abduk, wa ana 'ala 'ahdika wa wa'dika mastata't, a'udhu bika min sharri ma sana't, abu-u laka bini'matika 'alay, wa abu-u bidhanbi faghfir li fa-innahu la yaghfirudh-dhunuba illa ant",
     target: 3,
     color: "teal"
   },
@@ -102,7 +103,7 @@ export const ZIKR_SEQUENCE = [
     id: "main-5",
     label: "Dua for Relief",
     arabic: "اللهم إني عبدك، ابن عبدك، ابن أمتك، ناصيتي بيدك، ماضٍ فيَّ حكمك، عدلٌ فيَّ قضاؤك، أسألك بكل اسم هو لك سميت به نفسك... أن تجعل القرآن ربيع قلبي، ونور صدري، وجلاء حزني، وذهاب همي",
-    transliteration: "Allahumma inni 'abduk...",
+    transliteration: "Allahumma inni 'abduk, ibnu 'abdik, ibnu amatik, nasiyati bi-yadik, madin fiyya hukmuk, 'adlun fiyya qada-uk, as'aluka bikulli ismin huwa lak, sammayta bihi nafsak... an taj'alal-Qur'ana rabi'a qalbi, wa nura sadri, wa jala'a huzni, wa dhahaba hammi",
     target: 3,
     color: "teal"
   },
@@ -110,10 +111,38 @@ export const ZIKR_SEQUENCE = [
     id: "main-6",
     label: "Dua for Forgiveness",
     arabic: "اللهم إني ظلمت نفسي ظلماً كثيراً، ولا يغفر الذنوب إلا أنت، فاغفر لي مغفرة من عندك وارحمني إنك أنت الغفور الرحيم",
-    transliteration: "Allahumma inni zalamtu nafsi...",
+    transliteration: "Allahumma inni zalamtu nafsi zulman kathira, wa la yaghfirudh-dhunuba illa ant, faghfir li maghfiratan min 'indik warhamni innaka antal-Ghafurur-Rahim",
     target: 3,
     color: "teal"
   },
+  
+  // --- NEW DUAS ADDED HERE ---
+  {
+    id: "main-new-1",
+    label: "Dua for Purification",
+    arabic: "اللَّهُمَّ بَاعِدْ بَيْنِي وَبَيْنَ خَطَايَايَ كَمَا بَاعَدْتَ بَيْنَ الْمَشْرِقِ وَالْمَغْرِبِ، وَاعْمِ أَعْيُنَ النَّاسِ عَمَّا فَعَلْتُهُ وَتُبْتُ إِلَيْكَ مِنْهُ يَا رَبَّ الْعَالَمِينَ",
+    transliteration: "Allahumma ba'id bayni wa bayna khatayaya kama ba'adta baynal-mashriqi wal-maghrib, wa-a'mi a'yunan-nasi 'amma fa'altuhu wa tubtu ilayka minhu ya Rabbal-'Alamin",
+    target: 3,
+    color: "teal"
+  },
+  {
+    id: "main-new-2",
+    label: "Dua for Covering (Satr)",
+    arabic: "اللَّهُمَّ اسْتُرْنَا وَلاَ تَفْضَحْنَا، اللَّهُمَّ اسْتُرْنَا بِسِتْرِكَ الْجَمِيلِ الَّذِي سَتَرْتَ بِهِ نَفْسَكَ فَلاَ تَرَاكَ الْعُيُونُ",
+    transliteration: "Allahummasturna wa la tafdhahna, Allahummasturna bi-sitrikal-jamilil-ladhi satarta bihi nafsaka fala tarakal-'uyun",
+    target: 3,
+    color: "teal"
+  },
+  {
+    id: "main-new-3",
+    label: "Dua of Tawassul",
+    arabic: "اللَّهُمَّ إِنِّي أَسْأَلُكَ وَأَتَوَجَّهُ إِلَيْكَ بِنَبِيِّكَ مُحَمَّدٍ نَبِيِّ الرَّحْمَةِ، يَا رَسُولَ اللَّهِ إِنِّي تَوَجَّهْتُ بِكَ إِلَى رَبِّي فِي دَعَوَاتِي، اللَّهُمَّ اسْتَجِبْ دَعَوَاتِي كُلَّهَا",
+    transliteration: "Allahumma inni as'aluka wa atawajjahu ilayka bi-nabiyyika Muhammadin nabiyyin-rahmah, Ya Rasulallah inni tawajjahtu bika ila Rabbi fi da'awati, Allahummastajib da'awati kullaha",
+    target: 3,
+    color: "teal"
+  },
+  // ---------------------------
+
   {
     id: "main-7",
     label: "Hasbunallah",
@@ -126,17 +155,26 @@ export const ZIKR_SEQUENCE = [
     id: "main-8",
     label: "Hasbiyallah",
     arabic: "حسبي الله لا إله إلا هو عليه توكلت وهو رب العرش العظيم",
-    transliteration: "Hasbiyallahu la ilaha illa hu...",
+    transliteration: "Hasbiyallahu la ilaha illa hu, 'alayhi tawakkaltu wa huwa Rabbul 'Arshil 'Azim",
     target: 3,
     color: "teal"
   },
-  // --- CLOSING ---
+
+  // --- CLOSING SECTION ---
   {
-    id: "end-1",
+    id: "end-2",
     label: "Salawat Ibrahimiyyah",
     arabic: "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
-    transliteration: "Allahumma salli 'ala Muhammadin...",
-    target: 9,
+    transliteration: "Allahumma salli 'ala Muhammadin wa 'ala ali Muhammad, kama sallayta 'ala Ibrahima wa 'ala ali Ibrahim, innaka Hamidun Majid. Allahumma barik 'ala Muhammadin wa 'ala ali Muhammad, kama barakta 'ala Ibrahima wa 'ala ali Ibrahim, innaka Hamidun Majid",
+    target: 5,
+    color: "gold"
+  },
+  {
+    id: "end-final",
+    label: "Khatam (The Seal)",
+    arabic: "سُبْحَانَ الْوَاحِدِ الأَحَدِ، سُبْحَانَ الْفَرْدِ الصَّمَدِ، سُبْحَانَ رَافِعِ السَّمَاءِ بِغَيْرِ عَمَدٍ، سُبْحَانَ مَنْ بَسَطَ الأَرْضَ عَلَى مَاءٍ جَمَدٍ، سُبْحَانَ مَنْ خَلَقَ الْخَلْقَ فَأَحْصَاهُمْ عَدَدًا، سُبْحَانَ مَنْ قَسَمَ الرِّزْقَ وَلَمْ يَنْسَ أَحَدًا، سُبْحَانَ الَّذِي لَمْ يَتَّخِذْ صَاحِبَةً وَلاَ وَلَدًا، سُبْحَانَ الَّذِي لَمْ يَلِدْ وَلَمْ يُولَدْ وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ. سُبْحَانَ الَّذِي يَرْزُقُنَا وَيَرْحَمُنَا وَلَمْ يَنْسَ أَحَدًا، سُبْحَانَ رَبِّكَ رَبِّ الْعِزَّةِ عَمَّا يَصِفُونَ، وَسَلامٌ عَلَى الْمُرْسَلِينَ، وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+    transliteration: "Subhanal-Wahidil-Ahad, Subhanal-Fardis-Samad, Subhana rafi'is-sama'i bi-ghayri 'amad, Subhana man basatal-arda 'ala ma'in jamad, Subhana man khalaqal-khalqa fa-ahsahum 'adada, Subhana man qasamar-rizqa wa lam yansa ahada, Subhanalladhi lam yattakhidh sahibatan wa la walada, Subhanalladhi lam yalid wa lam yulad wa lam yakun lahu kufuwan ahad. Subhanalladhi yarzuquna wa yarhamuna wa lam yansa ahada. Subhana Rabbika Rabbil-'izzati 'amma yasifun, wa salamun 'alal-mursalin, wal-hamdu lillahi Rabbil-'Alamin.",
+    target: 1,
     color: "gold"
   }
 ];
